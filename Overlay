@@ -1,0 +1,76 @@
+<!-- Overlay Twitch Médiéval pour Streamlabs -->
+<div class="overlay-container">
+    <!-- Fond d'écran médiéval -->
+    <div class="background medieval-theme"></div>
+    
+    <!-- Cadre Webcam -->
+    <div class="webcam-frame">
+        <img src="webcam-frame.png" alt="Cadre Webcam" />
+    </div>
+    
+    <!-- Chat Box -->
+    <div class="chat-box">
+        <img src="chat-box-frame.png" alt="Cadre Chat" />
+    </div>
+    
+    <!-- Alertes (Nouveaux abonnés, dons, etc.) -->
+    <div class="alerts">
+        <p>Nouvelle alerte ici !</p>
+    </div>
+    
+    <!-- Panneaux d'infos -->
+    <div class="info-panels">
+        <div class="panel">À propos</div>
+        <div class="panel">Dons</div>
+        <div class="panel">Réseaux</div>
+    </div>
+</div>
+
+<style>
+.overlay-container {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+}
+
+.background {
+    background-image: url('medieval-background.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.webcam-frame, .chat-box, .alerts, .info-panels {
+    position: absolute;
+}
+
+.webcam-frame {
+    top: 50px;
+    right: 50px;
+}
+
+.chat-box {
+    bottom: 50px;
+    left: 50px;
+}
+
+.alerts {
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.info-panels {
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.panel {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+}
+</style>
